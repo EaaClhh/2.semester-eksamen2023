@@ -1,0 +1,527 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Karla&display=swap');
+
+/*Generelt*/
+body {
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navigationsbar*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+nav {
+    background-color: white;
+    min-height: 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav_menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 600;
+    color: black;
+}
+
+.nav_streg {
+    margin: 0px -30px;
+}
+
+.nav_link {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+
+.nav_link:hover {
+    color: gray;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.nav_width {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/*Forsiden*/
+#myVideo {
+    position: static;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 93px 0px;
+}
+
+/*Footer*/
+footer {
+    list-style: none;
+    background: rgb(63, 76, 80);
+    background: linear-gradient(0deg, rgba(63, 76, 80, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer_head {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    line-height: 1.5rem;
+    margin: 20px 50px;
+}
+
+.footer_content {
+    color: black;
+}
+
+.some {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer_icon {
+    width: 44px;
+    height: 44px;
+    margin: 0px 15px;
+}
+
+.footer_links {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+a.light:hover {
+    color: #dff5ff;
+    /*ændre farve*/
+}
+
+a.dark:hover {
+    color: blue;
+    /*ændre farve*/
+}
+
+.margin10 {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+@media(max-width:900px) {
+
+    /*Navigations bar*/
+    .nav_menu {
+        gap: 30px;
+    }
+}
+
+@media(max-width:700px) {
+
+    /*Navigations bar*/
+    .nav_width {
+        width: 100%;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: -100%;
+        gap: 0px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav_item {
+        margin: 16px 0px;
+    }
+
+    .nav_menu.active {
+        top: 65px;
+        left: 0px;
+    }
+
+    /*Footer*/
+    footer {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer_head {
+        margin-top: 30px;
+    }
+
+    /* 404 / Construcion */
+    .img_construcion {
+        max-width: 300px;
+    }
+
+    .construcion_tekst {
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+}
+
+/* Claras style til "hvem er vi" siden */
+
+.h_main,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.h_m {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    
+}
+
+.h_top {
+    padding-top: 143px;
+}
+
+
+.h_bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.h_designersofa {
+    background-image: url("img/designersofa.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.h_bordogreol {
+    background-image: url("img/reologbord.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.h_stole {
+    background-image: url("img/stole.jpg");
+    min-height: 400px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h_a{
+    font-family: 'Karla', sans-serif;
+    color: black;
+    font-size: 17px;
+}
+
+
+.h_h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+
+/* Vores medarbejdere style */
+
+.h_kim, .h_morten {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 350px;
+    height: 500px;
+    margin: 0px 5%;
+}
+
+.h_km{
+    width: 200px;
+    height: auto;
+}
+
+.h_1{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h_v{
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 34px;
+    color: black;
+    padding: 5%;
+}
+
+.h_kim:hover, .h_morten:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.h_container {
+    padding: 2px 16px;
+}
+.h_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 35px 0px;
+    width: 100%;
+}
+
+/* de to cards med Kim & Morten */
+
+.h_n{ /* h4 overskriften */
+    font-family: 'Bodoni Moda', serif;
+    font-size: 26px;
+    color: black;
+}
+
+.h_p{ /* brødteksten nedenunder navnene */
+    font-style: italic;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
